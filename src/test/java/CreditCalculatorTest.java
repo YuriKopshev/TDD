@@ -13,7 +13,7 @@ class CreditCalculatorTest {
 
     @Test
     void calculateSumPerMonth() {
-        int expected = 24870;
+        int expected = 24855;
         int actual = (int) calculator.calculateSumPerMonth(creditSum, creditRate, creditPeriod);
         Assertions.assertEquals(expected, actual);
 
@@ -21,14 +21,14 @@ class CreditCalculatorTest {
 
     @Test
     void calculateFullSumReturn() {
-        int expected = 5_971_441;
+        int expected = 5_965_414;
         int actual = (int) calculator.calculateFullSumReturn(creditSum, creditRate, creditPeriod);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void calculateOverPaySum() {
-        int expected = 3_971_441;
+        int expected = 3_965_414;
         int actual = (int) calculator.calculateOverPaySum(creditSum, creditRate, creditPeriod);
         Assertions.assertEquals(expected, actual);
     }
